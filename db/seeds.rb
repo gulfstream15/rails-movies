@@ -9,6 +9,7 @@
 Actor.delete_all
 Cast.delete_all
 Movie.delete_all
+Distributor.delete_all
 
 a1 = Actor.create({
   name: "Johnny Depp"
@@ -18,9 +19,14 @@ a2 = Actor.create({
   name: "Gilly Wendy III"
 })
 
+d1 = Distributor.create({
+  name: "Paramount"
+})
+
 m1 = Movie.create({
   title: "Edward Scissorhands",
-  releaseDate: "10-07-2017"
+  releaseDate: "10-07-2017",
+  distributor: d1
 })
 
 Cast.create({

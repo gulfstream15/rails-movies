@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170718133854) do
+ActiveRecord::Schema.define(version: 20170718142558) do
 
   create_table "actors", force: :cascade do |t|
     t.string   "name"
@@ -29,11 +29,13 @@ ActiveRecord::Schema.define(version: 20170718133854) do
   add_index "casts", ["actor_id"], name: "index_casts_on_actor_id"
   add_index "casts", ["movie_id"], name: "index_casts_on_movie_id"
 
-  create_table "movies", force: :cascade do |t|
-    t.string   "title"
-    t.datetime "releaseDate"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+  create_table "distributors", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
+# Could not dump table "movies" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
 end
