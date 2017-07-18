@@ -5,3 +5,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Actor.delete_all
+Cast.delete_all
+Movie.delete_all
+
+a1 = Actor.create({
+  name: "Johnny Depp"
+})
+
+m1 = Movie.create({
+  title: "Edward Scissorhands",
+  releaseDate: "10-07-2017"
+})
+
+Cast.create({
+  actor: a1,
+  movie: m1
+})
