@@ -14,6 +14,10 @@ a1 = Actor.create({
   name: "Johnny Depp"
 })
 
+a2 = Actor.create({
+  name: "Gilly Wendy III"
+})
+
 m1 = Movie.create({
   title: "Edward Scissorhands",
   releaseDate: "10-07-2017"
@@ -21,5 +25,10 @@ m1 = Movie.create({
 
 Cast.create({
   actor: a1,
+  movie: m1
+})
+
+Cast.create({
+  actor: a2,
   movie: m1
 })

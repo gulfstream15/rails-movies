@@ -1,4 +1,4 @@
 class Movie < ActiveRecord::Base
-  has_many :cast
+  has_many :casts
   has_many :actors, through: :cast
 end
